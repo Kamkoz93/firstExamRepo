@@ -8,7 +8,7 @@ export class CreateProductFormService {
   constructor(private _httpClient: HttpClient) {
   }
 
-  createProduct(object:ProductModel ): Observable<void> {
-    return this._httpClient.post(`https://fakestoreapi.com/products`, object).pipe(map((_=> void 0)));
+  createProduct(object:Omit<ProductModel, 'id'> ): Observable<void> {
+    return this._httpClient.post<ProductModel>(`https://fakestoreapi.com/products`, object).pipe(map((_=> void 0)));
   }
 }

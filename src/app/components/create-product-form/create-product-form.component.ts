@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component, ViewEncapsulation } from '@angular/core';
+import {Injectable} from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { CreateProductFormService } from '../../services/create-product-form.service';
 
