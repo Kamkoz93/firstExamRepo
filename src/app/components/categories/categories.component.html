@@ -1,0 +1,11 @@
+<mat-card>
+  <h1>Categories</h1>
+  <mat-chip-list>
+    <mat-chip *ngFor="let item of categories$ | async">
+      {{item}}
+    </mat-chip>
+  </mat-chip-list>
+</mat-card>
+
+<button [routerLink]="/create">Add Product</button>
+
